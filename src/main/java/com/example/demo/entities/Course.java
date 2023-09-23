@@ -27,6 +27,12 @@ public class Course {
 
     public void assignStudentToCourse(Student student){
         this.students.add(student);
+        students.getCourses().add(this);
+    }
+
+    public void removeStudentFromCourse(Student student){
+        this.students.remove(student);
+        students.getCourses().remove(this);
     }
 
     public Long getCourseId() {
